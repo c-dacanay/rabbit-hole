@@ -1,0 +1,219 @@
+@font-face{ 
+  font-family: 'LeMumure';
+  src: url('LeMurmure-Regular.eot');
+  src: url('LeMurmure-Regular.eot') format('embedded-opentype'),
+        url('LeMurmure-Regular.woff') format('woff'),
+        url('LeMurmure-Regular.woff2') format('woff2')
+}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;1,200;1,300;1,400&display=swap');
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background-color: black;
+  color: white;
+  font-family: 'Fanwood Text', 'Times New Roman', serif;
+  /* background: linear-gradient(191deg, #9daca8, #e5eae9, #7b878c, #646b6e);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 12s ease infinite;
+  -moz-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite; */
+  /* overflow-y: hidden; */
+  scroll-behavior: smooth;
+}
+
+.content {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.middle {
+  margin-left: auto;
+  margin-right: auto;
+  width: 630px;
+}
+
+.nav {
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  color: #aadcf1;
+  text-align: right;
+  padding: 3em;
+  position: fixed;
+  font-size: .8em;
+  line-height: 2em;
+  font-family: "IBM Plex Mono", monospace !important;
+}
+
+.nav a{
+  filter: blur(1.2px);
+}
+.nav a:hover {
+  filter: blur(0px);
+}
+.entry {
+  padding-bottom: 4em;
+}
+
+.card {
+  z-index: -1;
+  top: 10em;
+  left: 0;
+  position: fixed;
+  width: 27%;
+  padding: 3rem;
+}
+.card img {
+  width: 100%;
+  filter: blur(1.5px);
+}
+
+img:hover {
+  filter: blur(0);
+}
+
+#header {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#header h1:hover{
+  color: red;
+  cursor: pointer;
+}
+
+#header h2{
+  margin: 1em;
+  margin-top: 1.5em;
+}
+
+.main-nav{
+  width: 100%; 
+  margin-top: 3em;
+  font-size: 2rem;
+}
+
+h1 {
+  font-family: 'LeMumure', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.03em;
+  font-size: 5em;
+  margin: 0em;
+  padding-top: 2em;
+  /* line-height: 0.25em; */
+}
+
+h2 {
+  font-family: 'LeMumure', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 0.05em;
+  margin-top: 0;
+  text-align: center;
+}
+
+p {
+  margin-top: 0;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+a {
+  color: white;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.subhead {
+  font-family: 'IBM Plex Mono', Courier, monospace;
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+/* .test {
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: red;
+} */
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 39%;
+  }
+  50% {
+    background-position: 100% 62%;
+  }
+  100% {
+    background-position: 0% 39%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 39%;
+  }
+  50% {
+    background-position: 100% 62%;
+  }
+  100% {
+    background-position: 0% 39%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 39%;
+  }
+  50% {
+    background-position: 100% 62%;
+  }
+  100% {
+    background-position: 0% 39%;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 730px) {
+  .card {
+    width: 80%;
+    position: static;
+    display: flex;
+    align-items: center;
+  }
+
+  .middle {
+    width: 90%;
+  }
+
+  p {
+    font-size: 1.3em;
+    line-height: 1.3em;
+  }
+  .nav {
+    display: none;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    color: #aadcf1;
+    text-align: left;
+    padding: 3em;
+    position: fixed;
+    font-size: .8em;
+    line-height: 2em;
+  }
+/* 
+  body{
+    background-color: lightcoral;
+  } */
+
+}
