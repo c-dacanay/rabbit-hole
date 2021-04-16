@@ -35,25 +35,6 @@ body {
   width: 630px;
 }
 
-.nav {
-  overflow: hidden;
-  bottom: 0;
-  right: 0;
-  color: #aadcf1;
-  text-align: right;
-  padding: 3em;
-  position: fixed;
-  font-size: .8em;
-  line-height: 2em;
-  font-family: "IBM Plex Mono", monospace !important;
-}
-
-.nav a{
-  filter: blur(1.2px);
-}
-.nav a:hover {
-  filter: blur(0px);
-}
 .entry {
   padding-bottom: 4em;
 }
@@ -116,6 +97,7 @@ h2 {
   font-size: 3em;
   letter-spacing: 0.05em;
   margin-top: 0;
+  margin-bottom: .05em;
   text-align: center;
 }
 
@@ -137,6 +119,30 @@ a {
   font-style: italic;
   font-weight: 400;
   margin-top: 0;
+}
+
+
+.nav {
+  top: 0;
+  width: 25%;
+  /* background-color: black; */
+  color: red;
+  padding: 3em;
+  position: fixed;
+  font-size: .8em;
+  line-height: 2em;
+  font-family: "IBM Plex Mono", monospace !important;
+}
+
+.nav h2{
+  text-align: left;
+}
+
+.nav a{
+  filter: blur(1.2px);
+}
+.nav a:hover {
+  filter: blur(0px);
 }
 
 /* .test {
