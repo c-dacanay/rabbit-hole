@@ -19,12 +19,6 @@ body {
   background-color: black;
   color: white;
   font-family: 'Fanwood Text', 'Times New Roman', serif;
-  /* background: linear-gradient(191deg, #9daca8, #e5eae9, #7b878c, #646b6e);
-  background-size: 800% 800%;
-  -webkit-animation: AnimationName 12s ease infinite;
-  -moz-animation: AnimationName 12s ease infinite;
-  animation: AnimationName 12s ease infinite; */
-  /* overflow-y: hidden; */
   scroll-behavior: smooth;
 }
 
@@ -32,7 +26,6 @@ body {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
-
 
 .middle {
   margin-left: auto;
@@ -65,15 +58,18 @@ body {
   width: 27%;
   padding: 3rem;
 }
-
+img {
+  width: 90%;
+  padding-bottom: 2rem;
+}
 .card img {
   width: 100%;
   filter: blur(1.5px);
 }
-
+/* 
 img:hover {
   filter: blur(0);
-}
+} */
 
 #header {
   text-align: center;
@@ -108,6 +104,10 @@ h1 {
   /* line-height: 0.25em; */
 }
 
+h1 > a {
+  text-decoration: none;
+}
+
 h2 {
   font-family: 'LeMumure', sans-serif;
   text-transform: uppercase;
@@ -120,7 +120,7 @@ h2 {
 
 p {
   margin-top: 0;
-  font-size: 1.3em;
+  font-size: 20px;
   line-height: 1.5em;
 }
 
@@ -134,13 +134,21 @@ p {
 
 a {
   color: white;
-  font-style: italic;
-  text-decoration: none;
+  text-decoration: underline;
 }
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: red;
+}
+
 
 .subhead {
   font-family: 'TT2020', Courier, monospace;
-  font-size: 20px;
+  font-size: 25px;
   /* text-align: center; */
   margin-top: 0;
   margin-bottom: .5em;
@@ -173,7 +181,7 @@ a {
 }
 
 details {
-  font: 18px 'TT2020', Courier, monospace;
+  font: 25px 'TT2020', Courier, monospace;
 }
 
 details > summary {
@@ -182,15 +190,16 @@ details > summary {
 }
 
 details > p {
-  font: 1.2em 'Fanwood Text', 'Times New Roman', serif;
+  font: 20px 'Fanwood Text', 'Times New Roman', serif;
   border-radius: 0 0 10px 10px;
-  background-color: rgb(34, 34, 34);
-  padding: 2px 6px;
-  margin: 0;
+  /* background-color: rgb(34, 34, 34); */
+  padding: .5em;
+  margin: .5em;
 }
 
 details[open] > summary {
-  background-color: rgb(34, 34, 34);
+  background-color: red;
+  color: black;
 }
 
 /* .test {
