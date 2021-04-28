@@ -167,37 +167,42 @@ a:hover {
   transform: rotate(-90deg);
   transform-origin: top left;
   display: flex;
-  color: red;
+  color: black;
   background: red;
   font-size: 1em;
   font-family: "TT2020", monospace !important;
   align-items: center;
 }
 
-#menuItems {
-  position: absolute;
+/* #menuItems { */
+  /* position: absolute;
   float: right;
   right: 0px;
-  padding-right: 1em;
-}
+  padding-right: 1em; */
+/* } */
 
 #nav a{
   /* margin: 5em; */
   padding: 1em;
+  color: black;
   /* border: solid 5px red; */
   filter: blur(1.2px);
 }
 #nav a:hover {
   filter: blur(0px);
-  background: red;
-  color: black;
+  background: black;
+  color: red;
 }
 
 #nav h2 {
+  position: absolute;
+  float: right;
+  right: 0px;
+  padding-right: .5em;
   color: black;
   margin: 0;
   padding-top: .2em;
-  padding-left: 1em;
+
 }
 
 details {
