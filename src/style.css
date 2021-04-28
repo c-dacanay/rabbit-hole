@@ -25,6 +25,7 @@ body {
 .content {
   overflow-y: scroll;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 .middle {
@@ -154,30 +155,49 @@ a:hover {
   margin-bottom: .5em;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
 #nav {
-  display: none;
-  top: 0;
-  width: 300px;
-  background: black;
-  color: red;
-  padding: 3em;
+  z-index: 100;
+  width: 948px;
   position: fixed;
-  font-size: .8em;
-  line-height: 2em;
+  top: 100%;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  display: flex;
+  color: red;
+  background: red;
+  font-size: 1em;
   font-family: "TT2020", monospace !important;
+  align-items: center;
 }
 
-#nav h2{
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 0;
+#menuItems {
+  position: absolute;
+  float: right;
+  right: 0px;
+  padding-right: 1em;
 }
 
 #nav a{
+  /* margin: 5em; */
+  padding: 1em;
+  /* border: solid 5px red; */
   filter: blur(1.2px);
 }
 #nav a:hover {
   filter: blur(0px);
+  background: red;
+  color: black;
+}
+
+#nav h2 {
+  color: black;
+  margin: 0;
+  padding-top: .2em;
+  padding-left: 1em;
 }
 
 details {
@@ -207,7 +227,7 @@ details[open] > summary {
   border-width: 0.5px;
   border-color: red;
 } */
-
+/* 
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 39%;
@@ -240,7 +260,7 @@ details[open] > summary {
   100% {
     background-position: 0% 39%;
   }
-}
+} */
 
 ::-webkit-scrollbar {
   display: none;
