@@ -11,6 +11,8 @@
   src: url('TT2020StyleE-Regular.woff2') format('woff2')
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans&display=swap');
+
 html,
 body {
   height: 100%;
@@ -18,7 +20,7 @@ body {
   margin: auto;
   background-color: black;
   color: white;
-  font-family: 'Fanwood Text', 'Times New Roman', serif;
+  font-family: 'Libre Baskerville', 'Georgia', serif;
   scroll-behavior: smooth;
 }
 
@@ -39,15 +41,15 @@ body {
 }
 
 .glossary {
-  width: 100%;
   display: flex;
   padding: 3rem;
+  padding-top: 0;
   vertical-align: top;
 }
 
 .column {
   vertical-align: top;
-  width: 30%;
+  width: 100%;
   margin: 1em;
 }
 
@@ -59,18 +61,11 @@ body {
   width: 27%;
   padding: 3rem;
 }
+
 img {
   width: 90%;
   padding-bottom: 2rem;
 }
-.card img {
-  width: 100%;
-  filter: blur(1.5px);
-}
-/* 
-img:hover {
-  filter: blur(0);
-} */
 
 #header {
   text-align: center;
@@ -84,10 +79,15 @@ img:hover {
 }
 
 .main-nav{
-  font-family: 'TT2020', Courier, monospace;
+  /* font-family: 'TT2020', Courier, monospace; */
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
   width: 100%; 
   margin-top: 3em;
   font-size: 2rem;
+}
+
+.center {
+  text-align: center;
 }
 
 .spacer {
@@ -96,13 +96,11 @@ img:hover {
 
 h1 {
   font-family: 'LeMumure', sans-serif;
-  text-transform: uppercase;
-  font-weight: normal;
+  /* text-transform: uppercase; */
   letter-spacing: 0.03em;
   font-size: 5em;
   margin: 0em;
   padding-top: 2em;
-  /* line-height: 0.25em; */
 }
 
 h1 > a {
@@ -112,21 +110,23 @@ h1 > a {
 h2 {
   font-family: 'LeMumure', sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 3em;
   letter-spacing: 0.05em;
-  text-align: center;
+  font-size: 5em;
+  margin-top: 0;
+  /* text-align: center; */
 }
 
 p {
-  margin-top: 0;
-  font-size: 20px;
+  margin-top: 1em;
+  font-size: 1.2em;
+  /* font-size: 20px; */
   line-height: 1.5em;
+  hyphens: manual;
 }
 
 .notes {
-  font-family: 'TT2020', Courier, monospace;
+  /* font-family: 'TT2020', Courier, monospace; */
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
   text-transform: uppercase; 
   font-size: 16px;
   letter-spacing: 2px;
@@ -146,13 +146,17 @@ a:hover {
   color: red;
 }
 
+::-moz-selection { background: blue; }
+::selection { background: blue; }
 
 .subhead {
-  font-family: 'TT2020', Courier, monospace;
+  /* font-family: 'TT2020', Courier, monospace; */
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
   font-size: 25px;
-  /* text-align: center; */
+  letter-spacing: .05em;
   margin-top: 0;
-  margin-bottom: .5em;
+  margin-bottom: .03em;
+  text-transform: uppercase;
 }
 
 .wrapper {
@@ -170,23 +174,28 @@ a:hover {
   color: black;
   background: red;
   font-size: 1em;
-  font-family: "TT2020", monospace !important;
+  /* font-family: "TT2020", monospace !important; */
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
+  text-transform: uppercase;
   align-items: center;
 }
 
-/* #menuItems { */
-  /* position: absolute;
+/* #menuItems { 
+  position: absolute;
   float: right;
   right: 0px;
-  padding-right: 1em; */
-/* } */
+  padding-right: 1em;
+} */
 
 #nav a{
-  /* margin: 5em; */
+  text-decoration: none;
   padding: 1em;
   color: black;
-  /* border: solid 5px red; */
   filter: blur(1.2px);
+  background: red;
+  /* transition-property: background, color; */
+  /* transition-duration: 1s; */
+  transition: background 1s, color 1s, filter 1.2s;
 }
 #nav a:hover {
   filter: blur(0px);
@@ -198,15 +207,19 @@ a:hover {
   position: absolute;
   float: right;
   right: 0px;
+  font-size: 3em;
   padding-right: .5em;
   color: black;
   margin: 0;
   padding-top: .2em;
-
 }
 
 details {
-  font: 25px 'TT2020', Courier, monospace;
+  /* font: 25px 'TT2020', Courier, monospace; */
+  font: 20px 'Work Sans', 'Helvetica', sans-serif;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  letter-spacing: .02em;
 }
 
 details > summary {
@@ -215,7 +228,9 @@ details > summary {
 }
 
 details > p {
-  font: 20px 'Fanwood Text', 'Times New Roman', serif;
+  text-transform: none;
+  font: 17px 'Libre Baskerville', 'Georgia', serif;
+  line-height: 1.5em;
   border-radius: 0 0 10px 10px;
   /* background-color: rgb(34, 34, 34); */
   padding: .5em;
@@ -227,6 +242,22 @@ details[open] > summary {
   color: black;
 }
 
+.firstcharacter {
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
+  float: left;
+  font-size: 60px;
+  line-height: 40px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+  /* padding-left: 3px; */
+}
+
+/* .firstline {
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+} */
 /* .test {
   border-style: solid;
   border-width: 0.5px;
@@ -287,17 +318,26 @@ details[open] > summary {
     font-size: 1.3em;
     line-height: 1.3em;
   }
-  .nav {
-    display: none;
-    overflow: hidden;
+  #nav {
     top: 0;
+    /* right: 0; */
+    /* width: 100%; */
+    position: fixed;
+    width: 100%;
+    transform: none;
+    transform-origin: none;
+    /* top: 0;
     right: 0;
     color: #aadcf1;
     text-align: left;
     padding: 3em;
     position: fixed;
     font-size: .8em;
-    line-height: 2em;
+    line-height: 2em; */
+  }
+
+  #nav > .notes {
+    display: none;
   }
 
   .glossary {
