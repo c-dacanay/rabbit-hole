@@ -20,7 +20,6 @@ var myScrollFunc = function() {
     smallNav.style.display = "none"
   }
   changeDiv(y)
-
 };
 
 let t = 1;
