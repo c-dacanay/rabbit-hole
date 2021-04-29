@@ -24,6 +24,9 @@ body {
   scroll-behavior: smooth;
 }
 
+::-moz-selection { background: blue; }
+::selection { background: blue; }
+
 .content {
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -37,6 +40,7 @@ body {
 }
 
 .entry {
+  /* border: solid red 1px; */
   padding-bottom: 4em;
 }
 
@@ -47,30 +51,29 @@ body {
   vertical-align: top;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 .column {
   vertical-align: top;
   width: 100%;
   margin: 1em;
 }
 
-.card {
-  z-index: -1;
-  top: 10em;
-  left: 0;
-  position: fixed;
-  width: 27%;
-  padding: 3rem;
-}
-
 img {
   width: 90%;
   padding-bottom: 2rem;
+  filter: blur(2px);
+  transition: filter 1s;
 }
 
+img:hover {
+  filter: blur(0px);
+}
 #header {
   text-align: center;
-  /* width: 100%; */
-  /* height: 100vh; */
 }
 
 #header h1:hover{
@@ -96,9 +99,9 @@ img {
 
 h1 {
   font-family: 'LeMumure', sans-serif;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-size: 5em;
+  font-size: 7em;
   margin: 0em;
   padding-top: 2em;
 }
@@ -111,7 +114,7 @@ h2 {
   font-family: 'LeMumure', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 5em;
+  font-size: 4em;
   margin-top: 0;
   /* text-align: center; */
 }
@@ -124,6 +127,28 @@ p {
   hyphens: manual;
 }
 
+.firstcharacter {
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
+  float: left;
+  font-size: 60px;
+  line-height: 40px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+  /* padding-left: 3px; */
+}
+
+a, a:visited {
+  color: red;
+  text-decoration: none;
+  /* text-decoration: underline; */
+}
+
+a:hover {
+  color: white;
+  background: blue;
+}
+
 .notes {
   /* font-family: 'TT2020', Courier, monospace; */
   font-family: 'Work Sans', 'Helvetica', sans-serif;
@@ -132,23 +157,6 @@ p {
   letter-spacing: 2px;
   /* margin: 0; */
 }
-
-a {
-  color: white;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: white;
-}
-
-a:hover {
-  color: red;
-}
-
-::-moz-selection { background: blue; }
-::selection { background: blue; }
-
 .subhead {
   /* font-family: 'TT2020', Courier, monospace; */
   font-family: 'Work Sans', 'Helvetica', sans-serif;
@@ -158,14 +166,9 @@ a:hover {
   margin-bottom: .03em;
   text-transform: uppercase;
 }
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-}
 #nav {
   z-index: 100;
-  width: 948px;
+  width: 1000px;
   position: fixed;
   top: 100%;
   transform: rotate(-90deg);
@@ -193,8 +196,6 @@ a:hover {
   color: black;
   filter: blur(1.2px);
   background: red;
-  /* transition-property: background, color; */
-  /* transition-duration: 1s; */
   transition: background 1s, color 1s, filter 1.2s;
 }
 #nav a:hover {
@@ -208,7 +209,7 @@ a:hover {
   float: right;
   right: 0px;
   font-size: 3em;
-  padding-right: .5em;
+  padding-right: 1em;
   color: black;
   margin: 0;
   padding-top: .2em;
@@ -217,7 +218,6 @@ a:hover {
 details {
   /* font: 25px 'TT2020', Courier, monospace; */
   font: 20px 'Work Sans', 'Helvetica', sans-serif;
-  /* font-weight: bold; */
   text-transform: uppercase;
   letter-spacing: .02em;
 }
@@ -232,7 +232,6 @@ details > p {
   font: 17px 'Libre Baskerville', 'Georgia', serif;
   line-height: 1.5em;
   border-radius: 0 0 10px 10px;
-  /* background-color: rgb(34, 34, 34); */
   padding: .5em;
   margin: .5em;
 }
@@ -242,22 +241,13 @@ details[open] > summary {
   color: black;
 }
 
-.firstcharacter {
-  font-family: 'Work Sans', 'Helvetica', sans-serif;
-  float: left;
-  font-size: 60px;
-  line-height: 40px;
-  padding-top: 10px;
-  padding-bottom: 2px;
-  padding-right: 2px;
-  /* padding-left: 3px; */
+#bgimg {
+  top: -90px;
+  position: absolute;
+  width: 100%;
+  filter: blur(0);
+  /* z-index: -100; */
 }
-
-/* .firstline {
-  font-family: 'Work Sans', 'Helvetica', sans-serif;
-  font-size: 18px;
-  text-transform: uppercase;
-} */
 /* .test {
   border-style: solid;
   border-width: 0.5px;
@@ -318,6 +308,7 @@ details[open] > summary {
     font-size: 1.3em;
     line-height: 1.3em;
   }
+
   #nav {
     top: 0;
     /* right: 0; */
