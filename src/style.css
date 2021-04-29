@@ -209,11 +209,12 @@ a:hover {
   float: right;
   right: 0px;
   font-size: 3em;
-  padding-right: 1em;
+  padding-right: 1.2em;
   color: black;
   margin: 0;
   padding-top: .2em;
 }
+
 
 details {
   /* font: 25px 'TT2020', Courier, monospace; */
