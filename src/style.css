@@ -46,7 +46,7 @@ body {
 
 .glossary {
   display: flex;
-  padding: 3rem;
+  padding: 8rem;
   padding-top: 0;
   vertical-align: top;
 }
@@ -183,13 +183,6 @@ a:hover {
   align-items: center;
 }
 
-/* #menuItems { 
-  position: absolute;
-  float: right;
-  right: 0px;
-  padding-right: 1em;
-} */
-
 #nav a{
   text-decoration: none;
   padding: 1em;
@@ -217,7 +210,6 @@ a:hover {
 
 
 details {
-  /* font: 25px 'TT2020', Courier, monospace; */
   font: 20px 'Work Sans', 'Helvetica', sans-serif;
   text-transform: uppercase;
   letter-spacing: .02em;
@@ -242,6 +234,10 @@ details[open] > summary {
   color: black;
 }
 
+details[open] li {
+  font: 17px 'Libre Baskerville', 'Georgia', serif;
+  text-transform: none;
+}
 .ref {
   font-size: 12px;
 }
@@ -255,47 +251,12 @@ details[open] > summary {
   position: absolute;
   width: 100%;
   filter: blur(0);
-  /* z-index: -100; */
 }
 
 /* .test {
   border-style: solid;
   border-width: 0.5px;
   border-color: red;
-} */
-/* 
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 0% 39%;
-  }
-  50% {
-    background-position: 100% 62%;
-  }
-  100% {
-    background-position: 0% 39%;
-  }
-}
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 0% 39%;
-  }
-  50% {
-    background-position: 100% 62%;
-  }
-  100% {
-    background-position: 0% 39%;
-  }
-}
-@keyframes AnimationName {
-  0% {
-    background-position: 0% 39%;
-  }
-  50% {
-    background-position: 100% 62%;
-  }
-  100% {
-    background-position: 0% 39%;
-  }
 } */
 
 ::-webkit-scrollbar {
@@ -321,20 +282,10 @@ details[open] > summary {
 
   #nav {
     top: 0;
-    /* right: 0; */
-    /* width: 100%; */
     position: fixed;
     width: 100%;
     transform: none;
     transform-origin: none;
-    /* top: 0;
-    right: 0;
-    color: #aadcf1;
-    text-align: left;
-    padding: 3em;
-    position: fixed;
-    font-size: .8em;
-    line-height: 2em; */
   }
 
   #nav > .notes {
