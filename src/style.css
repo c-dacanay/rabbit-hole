@@ -40,7 +40,7 @@ body {
 }
 
 .entry {
-  padding-bottom: 4em;
+  padding-bottom: 12em;
 }
 
 .glossary {
@@ -83,7 +83,7 @@ img:hover {
 .main-nav{
   font-family: 'Work Sans', 'Helvetica', sans-serif;
   width: 100%; 
-  margin-top: 3em;
+  margin-top: 10em;
   font-size: 2rem;
 }
 
@@ -154,7 +154,7 @@ a:hover {
   font-family: 'Work Sans', 'Helvetica', sans-serif;
   font-size: 25px;
   letter-spacing: .05em;
-  margin-top: 2em;
+  margin-top: 0em;
   margin-bottom: .03em;
   text-transform: uppercase;
 }
@@ -180,7 +180,7 @@ a:hover {
   color: black;
   filter: blur(1.2px);
   background: red;
-  transition: background 1s, color 1s, filter 1.2s;
+  transition: background-color 1s, color 1s, filter 1.2s;
 }
 #nav a:hover {
   filter: blur(0px);
@@ -191,7 +191,8 @@ a:hover {
 #nav h2 {
   position: absolute;
   float: right;
-  right: 0px;
+  right: 2em;
+  /* margin-left: 1em; */
   font-size: 3em;
   padding-right: 1.2em;
   color: black;
